@@ -24,21 +24,27 @@ Specifically, they want to understand the factors affecting the demand for these
 9.Model Evaluation
 
 **Steps performed:**
-Step 1: Reading and Understanding the Data
+**Step 1: Reading and Understanding the Data**
+Data Quality Check - Checking for NULL/MISSING values & Finding Duplicate values
 
-        - Data Quality Check - Checking for NULL/MISSING values & Finding Duplicate values
-              **Inference : 1. No missing/NULL values found - Data looks good for our analysis. Please refer analysis below for details.**
-              **Inference : 2. Duplicate values are not present - Data looks good for our analysis. Please refer analysis below for details.**
-        - Data Cleaning - This will help to identify any Unknown/Unwanted values present in the dataset.
-             **Inferences: There seems to be no Unknown/Unwanted values in the entire dataset. Please refer to analysis below**
-        - Removing redundant & unwanted columns
-              Based on the high level look at the data and the data dictionary, the following variables can't be cosnidered from further analysis:
-              **instant**: Its only an index value , we have a default index for the same purpose
-              **dteday** : This has the date, Since we already have seperate columns for 'year' & 'month',hence, we can carry out our analysis without this column.
-              **casual & registered** : Both these columns contains the count of bike booked by different categories of customers. Since our objective is to find the total count of bikes and not by specific 
-                category, we will ignore these two columns.
+Inference : 1. No missing/NULL values found - Data looks good for our analysis. Please refer analysis below for details.**
+Inference : 2. Duplicate values are not present - Data looks good for our analysis. Please refer analysis below for details.**
 
-Step 2: Visualising the Data - Numerical & Categorical Variables
+Data Cleaning - This will help to identify any Unknown/Unwanted values present in the dataset.
+
+Inferences: There seems to be no Unknown/Unwanted values in the entire dataset. Please refer to analysis below**
+
+Removing redundant & unwanted columns
+
+Based on the high level look at the data and the data dictionary, the following variables can't be cosnidered from further analysis:
+
+instant: Its only an index value , we have a default index for the same purpose
+
+dteday: This has the date, Since we already have seperate columns for 'year' & 'month',hence, we can carry out our analysis without this column.
+
+casual & registered: Both these columns contains the count of bike booked by different categories of customers. Since our objective is to find the total count of bikes and not by specific category, we will ignore these two columns.
+
+**Step 2: Visualising the Data - Numerical & Categorical Variables**
 
         - By visualising the numeric variables, there are some independent variables like atemp , temp etc. that show a positive correlation with the target variable cnt. We can conclude that a linear model 
           can be considered in this case.
